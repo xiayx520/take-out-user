@@ -221,34 +221,23 @@ var _api = __webpack_require__(/*! @/pages/api/api.js */ 24);function ownKeys(ob
           orderNumber: this.orderDataInfo.orderNumber,
           payMethod: this.activeRadio === 0 ? 1 : 2 };
 
+        // 调用后端的paymentOrder API，后端已实现模拟支付功能
         (0, _api.paymentOrder)(params).then(function (res) {
           if (res.code === 1) {
-            wx.requestPayment({
-              nonceStr: res.data.nonceStr,
-              package: res.data.packageStr,
-              paySign: res.data.paySign,
-              timeStamp: res.data.timeStamp,
-              signType: res.data.signType,
-              success:function(res){
-                wx.showModal({
-                  title: '提示',
-                  content: '支付成功',
-                  success:function(){
-                    uni.redirectTo({url: '/pages/success/index?orderId=' + _this.orderId });
-                  }
-                })
-                console.log('支付成功!')
+            // 后端已处理模拟支付，直接显示成功并跳转
+            wx.showModal({
+              title: '提示',
+              content: '支付成功',
+              success: function() {
+                uni.redirectTo({url: '/pages/success/index?orderId=' + _this.orderId });
               }
-            })
-
-
-            //uni.redirectTo({url: '/pages/success/index?orderId=' + _this.orderId });
-
+            });
+            console.log('支付成功!');
           } else {
             wx.showModal({
               title: '提示',
               content: res.msg
-            })
+            });
           }
         });
       }

@@ -24290,8 +24290,9 @@
       "use strict";
       Object.defineProperty(exports, "__esModule", { value: true }); exports.baseUrl = void 0;
 
-      var baseUrl = 'http://localhost';//请求nginx，由nginx将请求转发到后端服务
-      // var baseUrl = 'https://47cb6659.r9.cpolar.top';
+      // var baseUrl = 'http://localhost';//请求nginx，由nginx将请求转发到后端服务
+      var baseUrl = 'http://8.138.18.159/';
+      // var baseUrl = 'http://localhost:8080'
       exports.baseUrl = baseUrl;
 
       /***/
