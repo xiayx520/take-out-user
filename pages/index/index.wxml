@@ -8,7 +8,7 @@
             <image class="logo_ruiji data-v-57280228" src="../../static/logo_ruiji.png"></image>
           </view>
           <view class="info_top_right data-v-57280228">
-            <view class="right_title data-v-57280228"><text class="data-v-57280228">苍穹外卖</text>
+            <view class="right_title data-v-57280228"><text class="data-v-57280228">苏仙餐厅</text>
               <block wx:if="{{shopStatus===1}}">
                 <view class="businessStatus data-v-57280228">营业中</view>
               </block>
@@ -31,9 +31,9 @@
         </view>
         <view class="info_bottom data-v-57280228">
           <view class="data-v-57280228">
-            <view class="word data-v-57280228">苍穹餐厅为顾客打造专业的大众化美食外送餐饮</view>
+            <view class="word data-v-57280228">苏仙餐厅为顾客打造专业的大众化美食外送餐饮</view>
             <view class="address data-v-57280228">
-              <icon class="data-v-57280228"></icon>北京市朝阳区新街大道一号楼8层
+              <icon class="data-v-57280228"></icon>苏仙区人民西路一号楼8层
             </view>
           </view>
           <view class="data-v-57280228">
